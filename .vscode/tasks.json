@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "mygpp_build",
+            "command": "bash",
+            "args": [
+                "-c",
+                "g++ -g '${file}' -o a.out -O2 -Wall -Wextra -Wshadow -Wconversion -pedantic && ./a.out"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "focus": true,
+                "clear": true
+            }
+        }
+    ]
+}

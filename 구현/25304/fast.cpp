@@ -8,24 +8,26 @@ int main() {
 
     //입력 : 1<= X <= 1,000,000,000, 1<= N <= 100, 1<= a,b <= 1,000,000
     int X = 0;
-    int N = 0, a = 0, b = 0;
+    int N = 0;
+    int a = 0;
+    int b = 0;
 
     //필요한 변수 : a*b의 합의 결과 값을 저장할 sum변수, 
     long long sum = 0; //초기화
-    cin.width(1000000000); //입력받을 수 있는 최대 글자 수 설정(**임베디드)
+    // cin.width(1000000000); //입력받을 수 있는 최대 글자 수 설정(**임베디드)
     cin >> X;
     
-    cin.width(100);
+    //cin.width(100);
     cin >> N;
-    const int Max_type = N;
-    
+    int Max_type = N;
+
     //입력값 a, b는 N의 값만큼 반복해서 입력을 받게 해야함(for문 사용)
     for (int j = 0; j < Max_type; j++){
-        cin.width(1000000);
+        //cin.width(1000000); 정수 입력에서는 불필요
         cin >> a;
-        cin.width(10);
+        //cin.width(10);
         cin >> b;
-        printf("%d %d\n", a, b); //입력값 확인용 출력문
+        //printf("%d %d\n", a, b); //입력값 확인용 출력문
 
         sum += a*b;
     }

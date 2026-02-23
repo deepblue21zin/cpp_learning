@@ -1,0 +1,25 @@
+# Example (널리 쓰이는 예시)
+9
+5 12 7 10 9 1 2 3 11
+13
+# expect: 3  (1+12, 2+11, 3+10)
+
+# Boundary: n=1 (쌍 없음)
+1
+7
+14
+# expect: 0
+
+# Counterexample 1: duplicates (같은 값이 여러개)
+4
+1 1 1 1
+2
+# expect: 2  (정렬+투포인터면 i=0,j=3 ->1쌍, i=1,j=2 ->1쌍)
+
+# Counterexample 2: includes exact pair with negatives? (문제가 양수만이면 이건 생략)
+# 대신 "정확히 한 쌍" / "아예 없음"으로
+5
+1 2 4 8 16
+7
+# expect: 1 (3이 없으니 1+6 불가, 2+5 불가, 4+3 불가 -> 사실 0)
+# -> 이건 기대값 재검증: expect: 0

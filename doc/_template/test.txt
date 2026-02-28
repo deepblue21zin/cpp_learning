@@ -1,0 +1,20 @@
+# BOJ XXXXX tests
+# 사용법: 아래 케이스 중 하나를 "통째로" 복사해서 실행 후 비교
+
+# T1: example
+(여기에 예제 입력)
+
+# expected:
+(예상 출력)
+
+# T2: edge (min/max)
+(경계 입력)
+
+# expected:
+...
+
+# T3: counterexample
+(반례 입력)
+
+# expected:
+...

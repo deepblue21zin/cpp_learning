@@ -1,0 +1,54 @@
+## TC1 : 최소/기본
+1
+a
+=> a
+
+## TC2 : 중복만 있는 경우
+5
+a
+a
+a
+a
+a
+=> a
+
+## TC3 : 길이 우선, 사전순 확인
+5
+ab
+a
+aa
+b
+ba
+정렬 기대:
+
+길이1: a, b
+
+길이2: aa, ab, ba
+→ 출력: a b aa ab ba
+
+## TC4 : 같은 길이 사전순(대소문자 없음 전제)
+4
+word
+ward
+world
+worm
+
+길이4끼리 사전순 확인
+
+## TC5 : 이미 정렬된 입력(정렬 안정성 착각 방지)
+4
+a
+aa
+aaa
+aaaa
+
+## TC6 : 완전 랜덤 + 중복 섞기
+8
+but
+i
+wont
+hesitate
+no
+more
+no
+more

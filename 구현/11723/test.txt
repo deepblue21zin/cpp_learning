@@ -1,0 +1,89 @@
+# BOJ 11723 tests.txt
+# 사용법: 아래 케이스 중 "하나"를 통째로 복사해서 실행한 뒤 expected와 비교
+
+# ------------------------------------------------------------
+# T1: 기본 동작 (add/remove/check/toggle/empty)
+13
+add 1
+check 1
+check 2
+add 2
+check 2
+remove 1
+check 1
+toggle 2
+check 2
+toggle 3
+check 3
+empty
+check 3
+# expected:
+1
+0
+1
+0
+0
+1
+0
+
+# ------------------------------------------------------------
+# T2: 중복/없는 원소 처리 (add 중복, remove 없는 원소)
+10
+add 5
+add 5
+check 5
+remove 5
+remove 5
+check 5
+toggle 5
+toggle 5
+check 5
+check 1
+# expected:
+1
+0
+0
+0
+
+# ------------------------------------------------------------
+# T3: all/empty + 제거/토글 조합
+9
+all
+check 1
+check 20
+toggle 10
+check 10
+remove 20
+check 20
+empty
+check 1
+# expected:
+1
+1
+0
+0
+0
+
+# ------------------------------------------------------------
+# T4: 경계값(1,20) + all/empty 섞기
+12
+add 20
+check 20
+add 1
+check 1
+toggle 20
+check 20
+all
+check 20
+check 1
+empty
+check 20
+check 1
+# expected:
+1
+1
+0
+1
+1
+0
+0

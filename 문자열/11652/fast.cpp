@@ -44,7 +44,7 @@ int main() {
         if (v[i] == v[i-1]){
             current_cnt++;
         }else{
-            current_cnt = 1;
+            current_cnt = 1;//어떤 값의 카운트인지” 코드만 보고 즉시 안 보임./요구사항이 바뀌면 쉽게 깨짐./디버깅 확장에 약함
         }
         if(current_cnt > max_cnt){
             max_cnt = current_cnt;
